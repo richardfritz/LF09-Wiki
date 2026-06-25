@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 320" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="940" height="320" fill="#ffffff"/>
+  <text x="20" y="30" font-size="22" font-weight="700" fill="#114B58">Interface-Identifier per EUI-64 (aus der MAC)</text>
+  <text x="20" y="50" font-size="13" fill="#5A6B70">Bei SLAAC bildet der Host die hinteren 64 Bit selbst aus seiner 48-Bit-MAC-Adresse.</text>
+
+  <defs><marker id="ea" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10 z" fill="#9AB0B6"/></marker></defs>
+
+  <!-- MAC -->
+  <text x="270" y="92" font-size="12.5" font-weight="700" fill="#114B58" text-anchor="end">MAC (48 Bit):</text>
+  <g font-family="Consolas, monospace" font-size="16" font-weight="700" text-anchor="middle">
+    <rect x="300" y="76" width="52" height="34" rx="4" fill="#2F6E86"/><text x="326" y="99" fill="#fff">00</text>
+    <rect x="358" y="76" width="52" height="34" rx="4" fill="#2F6E86"/><text x="384" y="99" fill="#fff">1B</text>
+    <rect x="416" y="76" width="52" height="34" rx="4" fill="#2F6E86"/><text x="442" y="99" fill="#fff">44</text>
+    <rect x="492" y="76" width="52" height="34" rx="4" fill="#2F607A"/><text x="518" y="99" fill="#fff">11</text>
+    <rect x="550" y="76" width="52" height="34" rx="4" fill="#2F607A"/><text x="576" y="99" fill="#fff">3A</text>
+    <rect x="608" y="76" width="52" height="34" rx="4" fill="#2F607A"/><text x="634" y="99" fill="#fff">B7</text>
+  </g>
+  <text x="480" y="68" font-size="11" fill="#9AB0B6" text-anchor="middle">↑ hier wird geteilt ↑</text>
+
+  <!-- steps -->
+  <text x="40" y="150" font-size="13" fill="#3A4A4F">① In die <tspan font-weight="700">Mitte</tspan> die Bytes <tspan font-family="Consolas, monospace" font-weight="700" fill="#B5790A">FF FE</tspan> einfügen.</text>
+  <text x="40" y="174" font-size="13" fill="#3A4A4F">② Im ersten Byte das <tspan font-weight="700">7. Bit (U/L)</tspan> kippen: <tspan font-family="Consolas, monospace" font-weight="700">00 → 02</tspan>.</text>
+
+  <line x1="480" y1="184" x2="480" y2="206" stroke="#9AB0B6" stroke-width="2" marker-end="url(#ea)"/>
+
+  <!-- result -->
+  <text x="186" y="240" font-size="12.5" font-weight="700" fill="#114B58" text-anchor="end">Interface-ID (64 Bit):</text>
+  <g font-family="Consolas, monospace" font-size="16" font-weight="700" text-anchor="middle">
+    <rect x="206" y="222" width="52" height="34" rx="4" fill="#C0504D"/><text x="232" y="245" fill="#fff">02</text>
+    <rect x="264" y="222" width="52" height="34" rx="4" fill="#2F6E86"/><text x="290" y="245" fill="#fff">1B</text>
+    <rect x="322" y="222" width="52" height="34" rx="4" fill="#2F6E86"/><text x="348" y="245" fill="#fff">44</text>
+    <rect x="380" y="222" width="52" height="34" rx="4" fill="#E0A93B"/><text x="406" y="245" fill="#5A3A00">FF</text>
+    <rect x="438" y="222" width="52" height="34" rx="4" fill="#E0A93B"/><text x="464" y="245" fill="#5A3A00">FE</text>
+    <rect x="496" y="222" width="52" height="34" rx="4" fill="#2F607A"/><text x="522" y="245" fill="#fff">11</text>
+    <rect x="554" y="222" width="52" height="34" rx="4" fill="#2F607A"/><text x="580" y="245" fill="#fff">3A</text>
+    <rect x="612" y="222" width="52" height="34" rx="4" fill="#2F607A"/><text x="638" y="245" fill="#fff">B7</text>
+  </g>
+  <text x="690" y="245" font-size="15" font-family="Consolas, monospace" fill="#0E7C8C" font-weight="700">→ 021b:44ff:fe11:3ab7</text>
+
+  <text x="20" y="296" font-size="12" fill="#5A6B70">Aus Datenschutzgründen nutzen viele Systeme heute stattdessen <tspan font-weight="700">zufällige</tspan> Interface-IDs (Privacy Extensions).</text>
+</svg>

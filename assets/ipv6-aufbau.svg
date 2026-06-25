@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 300" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="940" height="300" fill="#ffffff"/>
+  <text x="20" y="30" font-size="22" font-weight="700" fill="#114B58">Aufbau einer IPv6-Adresse (128 Bit)</text>
+  <text x="20" y="50" font-size="13" fill="#5A6B70">8 Blöcke à 16 Bit (4 Hexstellen). Üblich: 64 Bit Präfix (Netz) + 64 Bit Interface-Identifier (Host).</text>
+
+  <!-- /64 prefix bracket (top) -->
+  <line x1="33" y1="84" x2="463" y2="84" stroke="#0E9FB0" stroke-width="2.5"/>
+  <text x="248" y="78" font-size="12.5" font-weight="700" fill="#0E7C8C" text-anchor="middle">/64-Präfix (Netzteil)</text>
+
+  <!-- blocks -->
+  <g font-family="Consolas, monospace" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff">
+    <rect x="33"  y="92" width="100" height="48" rx="6" fill="#2F6E86"/><text x="83"  y="123">2001</text>
+    <rect x="143" y="92" width="100" height="48" rx="6" fill="#2F6E86"/><text x="193" y="123">0db8</text>
+    <rect x="253" y="92" width="100" height="48" rx="6" fill="#2F6E86"/><text x="303" y="123">85a3</text>
+    <rect x="363" y="92" width="100" height="48" rx="6" fill="#E0A93B"/><text x="413" y="123" fill="#5A3A00">0001</text>
+    <rect x="473" y="92" width="100" height="48" rx="6" fill="#2F607A"/><text x="523" y="123">0000</text>
+    <rect x="583" y="92" width="100" height="48" rx="6" fill="#2F607A"/><text x="633" y="123">0000</text>
+    <rect x="693" y="92" width="100" height="48" rx="6" fill="#2F607A"/><text x="743" y="123">0000</text>
+    <rect x="803" y="92" width="100" height="48" rx="6" fill="#2F607A"/><text x="853" y="123">0001</text>
+  </g>
+  <g font-size="18" font-weight="700" fill="#9AB0B6" text-anchor="middle">
+    <text x="138" y="122">:</text><text x="248" y="122">:</text><text x="358" y="122">:</text>
+    <text x="468" y="122">:</text><text x="578" y="122">:</text><text x="688" y="122">:</text><text x="798" y="122">:</text>
+  </g>
+
+  <!-- bottom brackets -->
+  <line x1="33" y1="152" x2="353" y2="152" stroke="#2F6E86" stroke-width="2.5"/>
+  <text x="193" y="172" font-size="12.5" font-weight="700" fill="#2F6E86" text-anchor="middle">Globales Routing-Präfix · 48 Bit</text>
+  <text x="193" y="188" font-size="11" fill="#5A6B70" text-anchor="middle">(vom ISP, z. B. /48)</text>
+
+  <line x1="363" y1="152" x2="463" y2="152" stroke="#B5790A" stroke-width="2.5"/>
+  <text x="413" y="172" font-size="11.5" font-weight="700" fill="#B5790A" text-anchor="middle">Subnetz-ID</text>
+  <text x="413" y="188" font-size="11" fill="#5A6B70" text-anchor="middle">16 Bit</text>
+
+  <line x1="473" y1="152" x2="903" y2="152" stroke="#2F607A" stroke-width="2.5"/>
+  <text x="688" y="172" font-size="12.5" font-weight="700" fill="#2F607A" text-anchor="middle">Interface-Identifier · 64 Bit</text>
+  <text x="688" y="188" font-size="11" fill="#5A6B70" text-anchor="middle">(Host, oft per SLAAC/EUI-64 gebildet)</text>
+
+  <text x="20" y="240" font-size="12.5" fill="#3A4A4F">Mit den <tspan font-weight="700">16 Subnetz-Bits</tspan> (zwischen ISP-Präfix und Bit 64) bildet man eigene Subnetze – analog zum IPv4-Subnetting.</text>
+  <text x="20" y="262" font-size="12.5" fill="#3A4A4F">In IPv6 gibt es <tspan font-weight="700">keine Netz-ID und keinen Broadcast</tspan>; die erste Adresse ist als Subnet-Router-Anycast reserviert.</text>
+</svg>

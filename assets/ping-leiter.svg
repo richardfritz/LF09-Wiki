@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="720" height="440" fill="#ffffff"/>
+  <text x="20" y="30" font-size="22" font-weight="700" fill="#114B58">Die Ping-Leiter</text>
+  <text x="20" y="50" font-size="13" fill="#5A6B70">Schritt für Schritt von innen nach außen. Der erste Schritt, der fehlschlägt, grenzt die Ursache ein.</text>
+
+  <defs><marker id="pa" markerWidth="12" markerHeight="12" refX="6" refY="5" orient="auto"><path d="M0,10 L6,0 L12,10 z" fill="#0E9FB0"/></marker></defs>
+
+  <!-- upward arrow -->
+  <line x1="66" y1="402" x2="66" y2="92" stroke="#0E9FB0" stroke-width="3"/>
+  <path d="M60,100 L66,84 L72,100 z" fill="#0E9FB0"/>
+  <text x="50" y="250" font-size="12.5" font-weight="700" fill="#0E7C8C" transform="rotate(-90 50 250)" text-anchor="middle">von innen nach außen</text>
+
+  <!-- rungs -->
+  <g font-size="15">
+    <!-- 4 -->
+    <rect x="120" y="80" width="500" height="54" rx="9" fill="#0E9FB0"/>
+    <circle cx="150" cy="107" r="17" fill="#fff"/><text x="150" y="113" font-size="16" font-weight="700" fill="#0E9FB0" text-anchor="middle">4</text>
+    <text x="182" y="103" font-weight="700" fill="#fff" font-family="Consolas, monospace">ping 8.8.8.8</text>
+    <text x="182" y="123" font-size="12.5" fill="#E7F5F7">Internet erreichbar?</text>
+    <!-- 3 -->
+    <rect x="120" y="146" width="500" height="54" rx="9" fill="#1C93A6"/>
+    <circle cx="150" cy="173" r="17" fill="#fff"/><text x="150" y="179" font-size="16" font-weight="700" fill="#1C93A6" text-anchor="middle">3</text>
+    <text x="182" y="169" font-weight="700" fill="#fff" font-family="Consolas, monospace">ping &lt;Gateway&gt;</text>
+    <text x="182" y="189" font-size="12.5" fill="#E7F5F7">lokales Netz (LAN) erreichbar?</text>
+    <!-- 2 -->
+    <rect x="120" y="212" width="500" height="54" rx="9" fill="#2E7C92"/>
+    <circle cx="150" cy="239" r="17" fill="#fff"/><text x="150" y="245" font-size="16" font-weight="700" fill="#2E7C92" text-anchor="middle">2</text>
+    <text x="182" y="235" font-weight="700" fill="#fff" font-family="Consolas, monospace">ping &lt;eigene IP&gt;</text>
+    <text x="182" y="255" font-size="12.5" fill="#E7F5F7">Netzwerkkarte funktioniert?</text>
+    <!-- 1 -->
+    <rect x="120" y="278" width="500" height="54" rx="9" fill="#2F6E86"/>
+    <circle cx="150" cy="305" r="17" fill="#fff"/><text x="150" y="311" font-size="16" font-weight="700" fill="#2F6E86" text-anchor="middle">1</text>
+    <text x="182" y="301" font-weight="700" fill="#fff" font-family="Consolas, monospace">ping 127.0.0.1</text>
+    <text x="182" y="321" font-size="12.5" fill="#E7F5F7">TCP/IP-Stack des OS aktiv?</text>
+    <!-- 0 -->
+    <rect x="120" y="344" width="500" height="54" rx="9" fill="#2F536E"/>
+    <circle cx="150" cy="371" r="17" fill="#fff"/><text x="150" y="377" font-size="16" font-weight="700" fill="#2F536E" text-anchor="middle">0</text>
+    <text x="182" y="367" font-weight="700" fill="#fff">LEDs &amp; Kabel</text>
+    <text x="182" y="387" font-size="12.5" fill="#D7EEF1">Physische Verbindung vorhanden?</text>
+  </g>
+</svg>

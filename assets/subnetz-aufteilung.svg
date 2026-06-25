@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="20" y="30" font-size="22" font-weight="700" fill="#114B58">Ein /24 in vier /26 aufteilen</text>
+  <text x="20" y="50" font-size="13" fill="#5A6B70">2 geliehene Netzbits → 2² = 4 Subnetze · Blockgröße 256 − 192 = 64 · je 2⁶ − 2 = 62 Hosts.</text>
+
+  <defs><marker id="sa" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10 z" fill="#9AB0B6"/></marker></defs>
+
+  <!-- parent -->
+  <rect x="320" y="72" width="260" height="54" rx="8" fill="#114B58"/>
+  <text x="450" y="96" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">192.168.0.0 /24</text>
+  <text x="450" y="115" font-size="12" fill="#D7EEF1" text-anchor="middle">ein Netz · 254 Hosts</text>
+
+  <!-- connectors -->
+  <line x1="450" y1="126" x2="115" y2="206" stroke="#9AB0B6" stroke-width="2" marker-end="url(#sa)"/>
+  <line x1="450" y1="126" x2="335" y2="206" stroke="#9AB0B6" stroke-width="2" marker-end="url(#sa)"/>
+  <line x1="450" y1="126" x2="565" y2="206" stroke="#9AB0B6" stroke-width="2" marker-end="url(#sa)"/>
+  <line x1="450" y1="126" x2="785" y2="206" stroke="#9AB0B6" stroke-width="2" marker-end="url(#sa)"/>
+
+  <!-- children -->
+  <g>
+    <rect x="20" y="208" width="190" height="96" rx="8" fill="#EAF2F4" stroke="#2F6E86"/>
+    <text x="115" y="232" font-size="14" font-weight="700" fill="#2F6E86" text-anchor="middle">192.168.0.0 /26</text>
+    <text x="115" y="258" font-size="12" fill="#3A4A4F" text-anchor="middle">Netz .0 · Broadcast .63</text>
+    <text x="115" y="280" font-size="12" font-weight="700" fill="#114B58" text-anchor="middle">Hosts .1 – .62</text>
+  </g>
+  <g>
+    <rect x="240" y="208" width="190" height="96" rx="8" fill="#EAF2F4" stroke="#2F6E86"/>
+    <text x="335" y="232" font-size="14" font-weight="700" fill="#2F6E86" text-anchor="middle">192.168.0.64 /26</text>
+    <text x="335" y="258" font-size="12" fill="#3A4A4F" text-anchor="middle">Netz .64 · Broadcast .127</text>
+    <text x="335" y="280" font-size="12" font-weight="700" fill="#114B58" text-anchor="middle">Hosts .65 – .126</text>
+  </g>
+  <g>
+    <rect x="460" y="208" width="190" height="96" rx="8" fill="#EAF2F4" stroke="#2F6E86"/>
+    <text x="555" y="232" font-size="14" font-weight="700" fill="#2F6E86" text-anchor="middle">192.168.0.128 /26</text>
+    <text x="555" y="258" font-size="12" fill="#3A4A4F" text-anchor="middle">Netz .128 · BC .191</text>
+    <text x="555" y="280" font-size="12" font-weight="700" fill="#114B58" text-anchor="middle">Hosts .129 – .190</text>
+  </g>
+  <g>
+    <rect x="680" y="208" width="190" height="96" rx="8" fill="#EAF2F4" stroke="#2F6E86"/>
+    <text x="775" y="232" font-size="14" font-weight="700" fill="#2F6E86" text-anchor="middle">192.168.0.192 /26</text>
+    <text x="775" y="258" font-size="12" fill="#3A4A4F" text-anchor="middle">Netz .192 · BC .255</text>
+    <text x="775" y="280" font-size="12" font-weight="700" fill="#114B58" text-anchor="middle">Hosts .193 – .254</text>
+  </g>
+
+  <text x="450" y="344" font-size="12.5" fill="#5A6B70" text-anchor="middle">Schrittweite = Blockgröße = 64. Jede erste Adresse ist die Netz-ID, jede letzte der Broadcast (beide nicht nutzbar).</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="920" height="400" fill="#ffffff"/>
+  <text x="20" y="32" font-size="22" font-weight="700" fill="#114B58">DNS – vom Namen zur IP-Adresse</text>
+  <text x="20" y="52" font-size="13" fill="#5A6B70">Der Resolver fragt sich von der Wurzel nach unten durch, bis er die zuständige Quelle findet.</text>
+
+  <defs><marker id="na" markerWidth="11" markerHeight="11" refX="7" refY="5" orient="auto"><path d="M0,0 L9,5 L0,10 z" fill="#5A6B70"/></marker></defs>
+
+  <!-- Client -->
+  <rect x="20" y="184" width="120" height="54" rx="8" fill="#2F6E86"/>
+  <text x="80" y="208" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">Client</text>
+  <text x="80" y="226" font-size="11" fill="#D7EEF1" text-anchor="middle">www.example.de</text>
+
+  <!-- Resolver -->
+  <rect x="320" y="176" width="170" height="74" rx="10" fill="#114B58"/>
+  <text x="405" y="206" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">DNS-Resolver</text>
+  <text x="405" y="226" font-size="11" fill="#D7EEF1" text-anchor="middle">rekursiv (z. B. Provider)</text>
+
+  <!-- servers -->
+  <rect x="720" y="70" width="180" height="52" rx="8" fill="#2F536E"/><text x="810" y="92" font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle">Root-Server</text><text x="810" y="110" font-size="11" fill="#C7D5D9" text-anchor="middle">die Wurzel  „.“</text>
+  <rect x="720" y="182" width="180" height="52" rx="8" fill="#2F607A"/><text x="810" y="204" font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle">TLD-Server</text><text x="810" y="222" font-size="11" fill="#C7D5D9" text-anchor="middle">zuständig für  „.de“</text>
+  <rect x="720" y="294" width="180" height="52" rx="8" fill="#2F6E86"/><text x="810" y="316" font-size="13.5" font-weight="700" fill="#fff" text-anchor="middle">Autoritativer Server</text><text x="810" y="334" font-size="11" fill="#D7EEF1" text-anchor="middle">kennt „example.de“</text>
+
+  <!-- client <-> resolver -->
+  <line x1="142" y1="200" x2="318" y2="200" stroke="#5A6B70" stroke-width="2.5" marker-end="url(#na)"/>
+  <text x="230" y="192" font-size="11.5" font-weight="700" fill="#114B58" text-anchor="middle">1) Anfrage</text>
+  <line x1="318" y1="224" x2="142" y2="224" stroke="#0E7C8C" stroke-width="2.5" marker-end="url(#na)"/>
+  <text x="230" y="240" font-size="11.5" font-weight="700" fill="#0E7C8C" text-anchor="middle">8) 93.184.216.34</text>
+
+  <!-- resolver -> servers -->
+  <line x1="492" y1="196" x2="716" y2="100" stroke="#5A6B70" stroke-width="2" marker-end="url(#na)"/>
+  <text x="600" y="132" font-size="11" fill="#5A6B70" text-anchor="middle" transform="rotate(-23 600 132)">2) wer kennt .de? → 3) frag TLD</text>
+
+  <line x1="496" y1="210" x2="716" y2="210" stroke="#5A6B70" stroke-width="2" marker-end="url(#na)"/>
+  <text x="606" y="202" font-size="11" fill="#5A6B70" text-anchor="middle">4) wer kennt example.de? → 5) frag autoritativ</text>
+
+  <line x1="492" y1="232" x2="716" y2="318" stroke="#5A6B70" stroke-width="2" marker-end="url(#na)"/>
+  <text x="600" y="300" font-size="11" fill="#5A6B70" text-anchor="middle" transform="rotate(21 600 300)">6) IP von www? → 7) 93.184.216.34</text>
+
+  <text x="20" y="378" font-size="12" fill="#5A6B70">Antworten werden zwischengespeichert (DNS-Cache) – die nächste gleiche Anfrage geht viel schneller. Leeren: ipconfig /flushdns.</text>
+</svg>

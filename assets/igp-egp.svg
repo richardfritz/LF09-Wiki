@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="920" height="380" fill="#ffffff"/>
+  <text x="20" y="30" font-size="22" font-weight="700" fill="#114B58">IGP &amp; EGP – Routing innerhalb und zwischen AS</text>
+  <text x="20" y="50" font-size="13" fill="#5A6B70">Innerhalb eines Autonomen Systems routet ein IGP (OSPF/RIP), zwischen AS routet das EGP (BGP).</text>
+
+  <!-- AS1 -->
+  <ellipse cx="240" cy="210" rx="195" ry="115" fill="#EAF2F4" stroke="#2F6E86" stroke-width="1.5"/>
+  <text x="240" y="120" font-size="14" font-weight="700" fill="#2F6E86" text-anchor="middle">AS 64500</text>
+  <text x="240" y="138" font-size="11.5" fill="#27566A" text-anchor="middle">IGP: OSPF / RIP</text>
+  <g>
+    <circle cx="150" cy="200" r="22" fill="#2F6E86"/><text x="150" y="205" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">R</text>
+    <circle cx="240" cy="270" r="22" fill="#2F6E86"/><text x="240" y="275" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">R</text>
+    <circle cx="330" cy="205" r="22" fill="#114B58"/><text x="330" y="210" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">BR</text>
+    <line x1="150" y1="200" x2="240" y2="270" stroke="#2F6E86" stroke-width="2"/>
+    <line x1="150" y1="200" x2="330" y2="205" stroke="#2F6E86" stroke-width="2"/>
+    <line x1="240" y1="270" x2="330" y2="205" stroke="#2F6E86" stroke-width="2"/>
+  </g>
+
+  <!-- AS2 -->
+  <ellipse cx="680" cy="210" rx="195" ry="115" fill="#EFF7F4" stroke="#0E9FB0" stroke-width="1.5"/>
+  <text x="680" y="120" font-size="14" font-weight="700" fill="#0E7C8C" text-anchor="middle">AS 64510</text>
+  <text x="680" y="138" font-size="11.5" fill="#0B6E7C" text-anchor="middle">IGP: OSPF / RIP</text>
+  <g>
+    <circle cx="590" cy="205" r="22" fill="#114B58"/><text x="590" y="210" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">BR</text>
+    <circle cx="700" cy="270" r="22" fill="#0E9FB0"/><text x="700" y="275" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">R</text>
+    <circle cx="780" cy="200" r="22" fill="#0E9FB0"/><text x="780" y="205" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">R</text>
+    <line x1="590" y1="205" x2="700" y2="270" stroke="#0E9FB0" stroke-width="2"/>
+    <line x1="590" y1="205" x2="780" y2="200" stroke="#0E9FB0" stroke-width="2"/>
+    <line x1="700" y1="270" x2="780" y2="200" stroke="#0E9FB0" stroke-width="2"/>
+  </g>
+
+  <!-- BGP link -->
+  <line x1="352" y1="205" x2="568" y2="205" stroke="#C0504D" stroke-width="4" stroke-dasharray="2 0"/>
+  <rect x="400" y="188" width="120" height="22" rx="11" fill="#FBEEEC"/>
+  <text x="460" y="204" font-size="12" font-weight="700" fill="#C0504D" text-anchor="middle">EGP: BGP</text>
+
+  <text x="20" y="356" font-size="12" fill="#5A6B70"><tspan font-weight="700" fill="#114B58">BR</tspan> = Border-Router (Grenzrouter). Jedes AS hat eine eindeutige <tspan font-weight="700">ASN</tspan>. Von außen zählt nur „durchqueren“ – die innere Struktur bleibt verborgen.</text>
+</svg>

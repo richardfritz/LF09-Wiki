@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="760" height="420" fill="#ffffff"/>
+  <text x="20" y="32" font-size="22" font-weight="700" fill="#114B58">DHCP – automatische IP-Vergabe (DORA)</text>
+  <text x="20" y="52" font-size="13" fill="#5A6B70">In vier Schritten bekommt ein Client Adresse, Maske, Gateway und DNS zugewiesen.</text>
+
+  <defs><marker id="da" markerWidth="11" markerHeight="11" refX="7" refY="5" orient="auto"><path d="M0,0 L9,5 L0,10 z" fill="#2F6E86"/></marker></defs>
+
+  <rect x="110" y="74" width="120" height="40" rx="8" fill="#2F6E86"/><text x="170" y="100" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">Client</text>
+  <rect x="530" y="74" width="120" height="40" rx="8" fill="#114B58"/><text x="590" y="100" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">DHCP-Server</text>
+  <line x1="170" y1="114" x2="170" y2="378" stroke="#C7D5D9" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="590" y1="114" x2="590" y2="378" stroke="#C7D5D9" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <text x="380" y="150" font-size="14" font-weight="700" fill="#114B58" text-anchor="middle">1) DHCP<tspan fill="#2F6E86">D</tspan>ISCOVER</text>
+  <text x="380" y="167" font-size="12" fill="#5A6B70" text-anchor="middle">Broadcast: „Wer hat eine IP für mich?“</text>
+  <line x1="172" y1="176" x2="588" y2="176" stroke="#2F6E86" stroke-width="2.5" marker-end="url(#da)"/>
+
+  <text x="380" y="214" font-size="14" font-weight="700" fill="#114B58" text-anchor="middle">2) DHCP<tspan fill="#2F6E86">O</tspan>FFER</text>
+  <text x="380" y="231" font-size="12" fill="#5A6B70" text-anchor="middle">Angebot: 192.168.0.50</text>
+  <line x1="588" y1="240" x2="172" y2="240" stroke="#2F6E86" stroke-width="2.5" marker-end="url(#da)"/>
+
+  <text x="380" y="278" font-size="14" font-weight="700" fill="#114B58" text-anchor="middle">3) DHCP<tspan fill="#2F6E86">R</tspan>EQUEST</text>
+  <text x="380" y="295" font-size="12" fill="#5A6B70" text-anchor="middle">„Ich nehme 192.168.0.50“</text>
+  <line x1="172" y1="304" x2="588" y2="304" stroke="#2F6E86" stroke-width="2.5" marker-end="url(#da)"/>
+
+  <text x="380" y="342" font-size="14" font-weight="700" fill="#114B58" text-anchor="middle">4) DHCP<tspan fill="#2F6E86">A</tspan>CK</text>
+  <text x="380" y="359" font-size="12" fill="#5A6B70" text-anchor="middle">Bestätigung + Maske, Gateway, DNS, Lease-Dauer</text>
+  <line x1="588" y1="368" x2="172" y2="368" stroke="#2F6E86" stroke-width="2.5" marker-end="url(#da)"/>
+
+  <text x="380" y="402" font-size="13" font-weight="700" fill="#0E7C8C" text-anchor="middle">D · O · R · A = Discover · Offer · Request · Acknowledge</text>
+</svg>

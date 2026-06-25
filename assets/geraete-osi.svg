@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="900" height="600" fill="#ffffff"/>
+  <text x="20" y="32" font-size="22" font-weight="700" fill="#114B58">Netzwerkgeräte nach OSI-Schicht</text>
+  <text x="20" y="52" font-size="13" fill="#5A6B70">Je höher die Schicht, desto „intelligenter“ die Entscheidung des Geräts.</text>
+
+  <!-- header -->
+  <rect x="20" y="70" width="860" height="34" rx="6" fill="#114B58"/>
+  <text x="40" y="92" font-size="13" font-weight="700" fill="#ffffff">Gerät</text>
+  <text x="300" y="92" font-size="13" font-weight="700" fill="#ffffff">Schicht</text>
+  <text x="430" y="92" font-size="13" font-weight="700" fill="#ffffff">Aufgabe / Merkmal</text>
+
+  <!-- rows -->
+  <g font-size="13.5">
+    <!-- 1 -->
+    <rect x="20" y="108" width="860" height="42" fill="#F2F9FB"/>
+    <text x="40" y="134" font-weight="700" fill="#1F2D31">Hub</text>
+    <rect x="300" y="118" width="90" height="24" rx="12" fill="#2F536E"/><text x="345" y="134" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">1 · Physical</text>
+    <text x="430" y="134" fill="#3A4A4F">Verteilt Signale an ALLE Ports – eine gemeinsame Kollisionsdomäne (veraltet).</text>
+    <!-- 2 -->
+    <rect x="20" y="150" width="860" height="42" fill="#ffffff"/>
+    <text x="40" y="176" font-weight="700" fill="#1F2D31">Repeater</text>
+    <rect x="300" y="160" width="90" height="24" rx="12" fill="#2F536E"/><text x="345" y="176" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">1 · Physical</text>
+    <text x="430" y="176" fill="#3A4A4F">Frischt das Signal auf und verlängert die Übertragungsstrecke.</text>
+    <!-- 3 -->
+    <rect x="20" y="192" width="860" height="42" fill="#F2F9FB"/>
+    <text x="40" y="218" font-weight="700" fill="#1F2D31">Medienkonverter</text>
+    <rect x="300" y="202" width="90" height="24" rx="12" fill="#2F536E"/><text x="345" y="218" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">1 · Physical</text>
+    <text x="430" y="218" fill="#3A4A4F">Wandelt das Übertragungsmedium, z. B. Twisted Pair ↔ Lichtwellenleiter.</text>
+    <!-- 4 -->
+    <rect x="20" y="234" width="860" height="42" fill="#ffffff"/>
+    <text x="40" y="260" font-weight="700" fill="#1F2D31">Bridge</text>
+    <rect x="300" y="244" width="90" height="24" rx="12" fill="#2F607A"/><text x="345" y="260" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">2 · Data Link</text>
+    <text x="430" y="260" fill="#3A4A4F">Verbindet zwei Segmente, trennt Kollisionsdomänen (Vorläufer des Switch).</text>
+    <!-- 5 -->
+    <rect x="20" y="276" width="860" height="42" fill="#F2F9FB"/>
+    <text x="40" y="302" font-weight="700" fill="#1F2D31">Switch</text>
+    <rect x="300" y="286" width="90" height="24" rx="12" fill="#2F607A"/><text x="345" y="302" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">2 · Data Link</text>
+    <text x="430" y="302" fill="#3A4A4F">Vermittelt Frames anhand der MAC-Tabelle; jeder Port = eigene Kollisionsdomäne.</text>
+    <!-- 6 -->
+    <rect x="20" y="318" width="860" height="42" fill="#ffffff"/>
+    <text x="40" y="344" font-weight="700" fill="#1F2D31">Access Point</text>
+    <rect x="300" y="328" width="98" height="24" rx="12" fill="#2F607A"/><text x="349" y="344" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">1–2 · WLAN</text>
+    <text x="438" y="344" fill="#3A4A4F">Funkbrücke zwischen WLAN-Clients und kabelgebundenem LAN.</text>
+    <!-- 7 -->
+    <rect x="20" y="360" width="860" height="42" fill="#F2F9FB"/>
+    <text x="40" y="386" font-weight="700" fill="#1F2D31">Router</text>
+    <rect x="300" y="370" width="90" height="24" rx="12" fill="#2F6E86"/><text x="345" y="386" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">3 · Network</text>
+    <text x="430" y="386" fill="#3A4A4F">Verbindet verschiedene Netze, Wegwahl per IP; trennt Broadcastdomänen.</text>
+    <!-- 8 -->
+    <rect x="20" y="402" width="860" height="42" fill="#ffffff"/>
+    <text x="40" y="428" font-weight="700" fill="#1F2D31">Layer-3-Switch</text>
+    <rect x="300" y="412" width="90" height="24" rx="12" fill="#2F6E86"/><text x="345" y="428" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">3 · Network</text>
+    <text x="430" y="428" fill="#3A4A4F">Switch mit Routingfunktion – ideal fürs Inter-VLAN-Routing im LAN.</text>
+    <!-- 9 -->
+    <rect x="20" y="444" width="860" height="42" fill="#F2F9FB"/>
+    <text x="40" y="470" font-weight="700" fill="#1F2D31">Firewall</text>
+    <rect x="300" y="454" width="104" height="24" rx="12" fill="#2E7C92"/><text x="352" y="470" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">3–7 · L3–L7</text>
+    <text x="444" y="470" fill="#3A4A4F">Filtert Verkehr nach Regeln (IP/Port bis Anwendungsebene).</text>
+    <!-- 10 -->
+    <rect x="20" y="486" width="860" height="42" fill="#ffffff"/>
+    <text x="40" y="512" font-weight="700" fill="#1F2D31">Modem</text>
+    <rect x="300" y="496" width="90" height="24" rx="12" fill="#2F536E"/><text x="345" y="512" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">1 · Physical</text>
+    <text x="430" y="512" fill="#3A4A4F">Moduliert/demoduliert Signale für die Anschlussleitung (DSL, Kabel).</text>
+  </g>
+  <rect x="20" y="108" width="860" height="420" rx="4" fill="none" stroke="#D7EEF1" stroke-width="1.5"/>
+  <text x="20" y="556" font-size="12" fill="#5A6B70">Merksatz: Hub = dumm (Schicht 1), Switch = MAC (Schicht 2), Router = IP (Schicht 3).</text>
+</svg>

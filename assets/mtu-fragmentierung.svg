@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 330" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="920" height="330" fill="#ffffff"/>
+  <text x="20" y="30" font-size="22" font-weight="700" fill="#114B58">MTU &amp; IP-Fragmentierung</text>
+  <text x="20" y="50" font-size="13" fill="#5A6B70">Trifft ein zu großes Paket auf einen Router mit kleinerer MTU, wird es in Fragmente zerteilt.</text>
+
+  <defs><marker id="ma" markerWidth="11" markerHeight="11" refX="7" refY="5" orient="auto"><path d="M0,0 L9,5 L0,10 z" fill="#5A6B70"/></marker></defs>
+
+  <!-- nodes -->
+  <rect x="30" y="92" width="96" height="44" rx="8" fill="#2F6E86"/><text x="78" y="119" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Sender</text>
+  <circle cx="300" cy="114" r="34" fill="#114B58"/><text x="300" y="110" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">R1</text><text x="300" y="126" font-size="10" fill="#D7EEF1" text-anchor="middle">MTU 1500</text>
+  <circle cx="560" cy="114" r="34" fill="#C0504D"/><text x="560" y="110" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">R2</text><text x="560" y="126" font-size="10" fill="#FBEEEC" text-anchor="middle">MTU 500</text>
+  <rect x="800" y="92" width="96" height="44" rx="8" fill="#2F6E86"/><text x="848" y="119" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Empfänger</text>
+
+  <line x1="126" y1="114" x2="262" y2="114" stroke="#5A6B70" stroke-width="2.5" marker-end="url(#ma)"/>
+  <line x1="338" y1="114" x2="522" y2="114" stroke="#5A6B70" stroke-width="2.5" marker-end="url(#ma)"/>
+  <line x1="598" y1="114" x2="796" y2="114" stroke="#5A6B70" stroke-width="2.5" marker-end="url(#ma)"/>
+
+  <!-- big packet before R2 -->
+  <rect x="356" y="180" width="150" height="40" rx="6" fill="#2F6E86"/>
+  <text x="431" y="205" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">IP-Paket · 1500 B</text>
+  <text x="431" y="240" font-size="11" fill="#5A6B70" text-anchor="middle">passt bei R1 (MTU 1500)</text>
+
+  <!-- fragments after R2 -->
+  <rect x="640" y="180" width="68" height="40" rx="6" fill="#E0A93B"/><text x="674" y="205" font-size="11.5" font-weight="700" fill="#5A3A00" text-anchor="middle">≤500</text>
+  <rect x="714" y="180" width="68" height="40" rx="6" fill="#E0A93B"/><text x="748" y="205" font-size="11.5" font-weight="700" fill="#5A3A00" text-anchor="middle">≤500</text>
+  <rect x="788" y="180" width="68" height="40" rx="6" fill="#E0A93B"/><text x="822" y="205" font-size="11.5" font-weight="700" fill="#5A3A00" text-anchor="middle">Rest</text>
+  <text x="748" y="240" font-size="11" fill="#5A6B70" text-anchor="middle">R2 fragmentiert (Payload je durch 8 teilbar)</text>
+
+  <line x1="510" y1="200" x2="636" y2="200" stroke="#C0504D" stroke-width="2.5" marker-end="url(#ma)"/>
+  <text x="572" y="192" font-size="11" font-weight="700" fill="#C0504D" text-anchor="middle">zerteilen</text>
+
+  <text x="20" y="300" font-size="12.5" fill="#3A4A4F">Zusammengesetzt wird <tspan font-weight="700">erst beim Empfänger</tspan>. Geht ein Fragment verloren, ist das ganze Paket verloren. Gesetztes <tspan font-weight="700">DF-Bit</tspan> verbietet Fragmentierung → Router meldet per ICMP.</text>
+</svg>

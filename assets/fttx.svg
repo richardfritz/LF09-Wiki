@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 430" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="940" height="430" fill="#ffffff"/>
+  <text x="20" y="30" font-size="22" font-weight="700" fill="#114B58">FTTx – wie weit reicht die Glasfaser?</text>
+  <text x="20" y="50" font-size="13" fill="#5A6B70">Je näher die Glasfaser ans Endgerät kommt (C → B → H → D), desto schneller die Verbindung.</text>
+
+  <!-- station markers -->
+  <g font-size="11.5" fill="#465A60" text-anchor="middle">
+    <text x="120" y="80">VSt</text>
+    <text x="350" y="80">KVz · Curb</text>
+    <text x="520" y="80">Gebäude</text>
+    <text x="680" y="80">Wohnung</text>
+    <text x="860" y="80">Schreibtisch</text>
+  </g>
+  <g stroke="#D7E3E6" stroke-width="1" stroke-dasharray="3 4">
+    <line x1="120" y1="90" x2="120" y2="372"/>
+    <line x1="350" y1="90" x2="350" y2="372"/>
+    <line x1="520" y1="90" x2="520" y2="372"/>
+    <line x1="680" y1="90" x2="680" y2="372"/>
+    <line x1="860" y1="90" x2="860" y2="372"/>
+  </g>
+
+  <!-- rows -->
+  <!-- FTTC -->
+  <text x="20" y="120" font-size="14" font-weight="700" fill="#114B58">FTTC</text>
+  <text x="20" y="136" font-size="11" fill="#5A6B70">to the Curb</text>
+  <line x1="120" y1="128" x2="350" y2="128" stroke="#0E9FB0" stroke-width="8" stroke-linecap="round"/>
+  <line x1="350" y1="128" x2="860" y2="128" stroke="#E0A93B" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="350" cy="128" r="6" fill="#114B58"/>
+  <text x="600" y="124" font-size="11" fill="#7A5A12" text-anchor="middle">Kupfer (VDSL)</text>
+
+  <!-- FTTB -->
+  <text x="20" y="190" font-size="14" font-weight="700" fill="#114B58">FTTB</text>
+  <text x="20" y="206" font-size="11" fill="#5A6B70">to the Building</text>
+  <line x1="120" y1="198" x2="520" y2="198" stroke="#0E9FB0" stroke-width="8" stroke-linecap="round"/>
+  <line x1="520" y1="198" x2="860" y2="198" stroke="#E0A93B" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="520" cy="198" r="6" fill="#114B58"/>
+  <text x="690" y="194" font-size="11" fill="#7A5A12" text-anchor="middle">Kupfer (im Haus)</text>
+
+  <!-- FTTH -->
+  <text x="20" y="260" font-size="14" font-weight="700" fill="#114B58">FTTH</text>
+  <text x="20" y="276" font-size="11" fill="#5A6B70">to the Home</text>
+  <line x1="120" y1="268" x2="680" y2="268" stroke="#0E9FB0" stroke-width="8" stroke-linecap="round"/>
+  <line x1="680" y1="268" x2="860" y2="268" stroke="#E0A93B" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="680" cy="268" r="6" fill="#114B58"/>
+
+  <!-- FTTD -->
+  <text x="20" y="330" font-size="14" font-weight="700" fill="#114B58">FTTD</text>
+  <text x="20" y="346" font-size="11" fill="#5A6B70">to the Desk</text>
+  <line x1="120" y1="338" x2="860" y2="338" stroke="#0E9FB0" stroke-width="8" stroke-linecap="round"/>
+  <text x="490" y="334" font-size="11" fill="#0B6E7C" text-anchor="middle">durchgängig Glasfaser</text>
+
+  <!-- legend -->
+  <line x1="300" y1="400" x2="330" y2="400" stroke="#0E9FB0" stroke-width="8" stroke-linecap="round"/>
+  <text x="338" y="404" font-size="12" fill="#3A4A4F">Glasfaser</text>
+  <line x1="470" y1="400" x2="500" y2="400" stroke="#E0A93B" stroke-width="8" stroke-linecap="round"/>
+  <text x="508" y="404" font-size="12" fill="#3A4A4F">Kupfer</text>
+  <text x="600" y="404" font-size="11.5" fill="#5A6B70">Kette: VSt → KVz → APL → TA → Endgerät</text>
+</svg>

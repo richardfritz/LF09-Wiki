@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="920" height="540" fill="#ffffff"/>
+  <text x="20" y="32" font-size="22" font-weight="700" fill="#114B58">Kapselung (Encapsulation)</text>
+  <text x="20" y="52" font-size="13" fill="#5A6B70">Auf dem Weg nach unten fügt jede Schicht ihren eigenen Kopf (Header) hinzu.</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 z" fill="#5A6B70"/>
+    </marker>
+  </defs>
+
+  <!-- Row 1 Anwendung -->
+  <text x="20" y="92" font-size="14" font-weight="700" fill="#114B58">Schicht 7–5</text>
+  <text x="20" y="110" font-size="12" fill="#5A6B70">Anwendung</text>
+  <text x="20" y="128" font-size="12" font-weight="700" fill="#E0A93B">PDU: Daten</text>
+  <rect x="300" y="78" width="300" height="46" rx="7" fill="#E0A93B"/>
+  <text x="450" y="106" font-size="14" font-weight="700" fill="#5A3A00" text-anchor="middle">Daten (Nutzdaten)</text>
+
+  <!-- Row 2 Transport -->
+  <text x="20" y="178" font-size="14" font-weight="700" fill="#114B58">Schicht 4</text>
+  <text x="20" y="196" font-size="12" fill="#5A6B70">Transport</text>
+  <text x="20" y="214" font-size="12" font-weight="700" fill="#2E7C92">PDU: Segment</text>
+  <rect x="300" y="164" width="78" height="46" rx="7" fill="#2E7C92"/>
+  <text x="339" y="192" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">TCP/UDP</text>
+  <rect x="378" y="164" width="300" height="46" rx="7" fill="#E0A93B"/>
+  <text x="528" y="192" font-size="13" font-weight="700" fill="#5A3A00" text-anchor="middle">Daten</text>
+
+  <!-- Row 3 Vermittlung -->
+  <text x="20" y="264" font-size="14" font-weight="700" fill="#114B58">Schicht 3</text>
+  <text x="20" y="282" font-size="12" fill="#5A6B70">Vermittlung</text>
+  <text x="20" y="300" font-size="12" font-weight="700" fill="#2F6E86">PDU: Paket</text>
+  <rect x="300" y="250" width="78" height="46" rx="7" fill="#2F6E86"/>
+  <text x="339" y="278" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">IP</text>
+  <rect x="378" y="250" width="78" height="46" rx="7" fill="#2E7C92"/>
+  <text x="417" y="278" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">TCP/UDP</text>
+  <rect x="456" y="250" width="300" height="46" rx="7" fill="#E0A93B"/>
+  <text x="606" y="278" font-size="13" font-weight="700" fill="#5A3A00" text-anchor="middle">Daten</text>
+
+  <!-- Row 4 Sicherung -->
+  <text x="20" y="350" font-size="14" font-weight="700" fill="#114B58">Schicht 2</text>
+  <text x="20" y="368" font-size="12" fill="#5A6B70">Sicherung</text>
+  <text x="20" y="386" font-size="12" font-weight="700" fill="#2F536E">PDU: Frame</text>
+  <rect x="300" y="336" width="78" height="46" rx="7" fill="#2F536E"/>
+  <text x="339" y="364" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">MAC</text>
+  <rect x="378" y="336" width="78" height="46" rx="7" fill="#2F6E86"/>
+  <text x="417" y="364" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">IP</text>
+  <rect x="456" y="336" width="78" height="46" rx="7" fill="#2E7C92"/>
+  <text x="495" y="364" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">TCP/UDP</text>
+  <rect x="534" y="336" width="300" height="46" rx="7" fill="#E0A93B"/>
+  <text x="684" y="364" font-size="13" font-weight="700" fill="#5A3A00" text-anchor="middle">Daten</text>
+  <rect x="834" y="336" width="50" height="46" rx="7" fill="#2F536E"/>
+  <text x="859" y="364" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">FCS</text>
+
+  <!-- Row 5 Bit -->
+  <text x="20" y="436" font-size="14" font-weight="700" fill="#114B58">Schicht 1</text>
+  <text x="20" y="454" font-size="12" fill="#5A6B70">Bitübertragung</text>
+  <text x="20" y="472" font-size="12" font-weight="700" fill="#2F536E">PDU: Bit</text>
+  <rect x="300" y="422" width="584" height="44" rx="7" fill="#243B4F"/>
+  <text x="592" y="450" font-size="15" font-weight="700" fill="#7FE3F0" text-anchor="middle" font-family="Consolas, monospace">0 1 0 0 1 1 1 0 1 0 1 1 0 0 1 0 1 0 0 1 1 0 1</text>
+
+  <!-- arrows -->
+  <line x1="270" y1="126" x2="270" y2="162" stroke="#5A6B70" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="270" y1="212" x2="270" y2="248" stroke="#5A6B70" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="270" y1="298" x2="270" y2="334" stroke="#5A6B70" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="270" y1="384" x2="270" y2="420" stroke="#5A6B70" stroke-width="2" marker-end="url(#arr)"/>
+
+  <text x="300" y="500" font-size="12" fill="#5A6B70">Beim Empfänger läuft es umgekehrt (Entkapselung): jede Schicht entfernt „ihren“ Header und reicht den Rest nach oben.</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="900" height="440" fill="#ffffff"/>
+  <text x="20" y="32" font-size="22" font-weight="700" fill="#114B58">Aufbau des IPv4-Headers</text>
+  <text x="20" y="52" font-size="13" fill="#5A6B70">32 Bit pro Zeile. Türkis = im Unterricht betrachtete Felder (TTL, Protokoll, Prüfsumme, Adressen).</text>
+
+  <!-- bit ruler -->
+  <g font-size="11" fill="#5A6B70" text-anchor="middle">
+    <text x="50" y="80">0</text><text x="150" y="80">4</text><text x="250" y="80">8</text>
+    <text x="450" y="80">16</text><text x="525" y="80">19</text><text x="650" y="80">24</text><text x="848" y="80">31</text>
+  </g>
+
+  <g font-size="13" text-anchor="middle">
+    <!-- Row1 -->
+    <rect x="50"  y="88" width="100" height="44" fill="#EAF0F2" stroke="#C7D5D9"/><text x="100" y="106" fill="#1F2D31" font-weight="600">Version</text><text x="100" y="122" fill="#5A6B70" font-size="11">4 Bit</text>
+    <rect x="150" y="88" width="100" height="44" fill="#EAF0F2" stroke="#C7D5D9"/><text x="200" y="106" fill="#1F2D31" font-weight="600">IHL</text><text x="200" y="122" fill="#5A6B70" font-size="11">4 Bit</text>
+    <rect x="250" y="88" width="200" height="44" fill="#EAF0F2" stroke="#C7D5D9"/><text x="350" y="106" fill="#1F2D31" font-weight="600">DSCP / ToS</text><text x="350" y="122" fill="#5A6B70" font-size="11">8 Bit</text>
+    <rect x="450" y="88" width="400" height="44" fill="#EAF0F2" stroke="#C7D5D9"/><text x="650" y="106" fill="#1F2D31" font-weight="600">Gesamtlänge</text><text x="650" y="122" fill="#5A6B70" font-size="11">16 Bit</text>
+    <!-- Row2 -->
+    <rect x="50"  y="132" width="400" height="44" fill="#EAF0F2" stroke="#C7D5D9"/><text x="250" y="150" fill="#1F2D31" font-weight="600">Identifikation</text><text x="250" y="166" fill="#5A6B70" font-size="11">16 Bit</text>
+    <rect x="450" y="132" width="75" height="44" fill="#EAF0F2" stroke="#C7D5D9"/><text x="487" y="152" fill="#1F2D31" font-weight="600" font-size="12">Flags</text><text x="487" y="166" fill="#5A6B70" font-size="10">3</text>
+    <rect x="525" y="132" width="325" height="44" fill="#EAF0F2" stroke="#C7D5D9"/><text x="687" y="150" fill="#1F2D31" font-weight="600">Fragment-Offset</text><text x="687" y="166" fill="#5A6B70" font-size="11">13 Bit</text>
+    <!-- Row3 highlighted -->
+    <rect x="50"  y="176" width="200" height="44" fill="#2F6E86" stroke="#1F5266"/><text x="150" y="194" fill="#fff" font-weight="700">TTL</text><text x="150" y="210" fill="#D7EEF1" font-size="11">8 Bit · max. Hops</text>
+    <rect x="250" y="176" width="200" height="44" fill="#2F6E86" stroke="#1F5266"/><text x="350" y="194" fill="#fff" font-weight="700">Protokoll</text><text x="350" y="210" fill="#D7EEF1" font-size="11">8 Bit · TCP=6, UDP=17</text>
+    <rect x="450" y="176" width="400" height="44" fill="#2F6E86" stroke="#1F5266"/><text x="650" y="194" fill="#fff" font-weight="700">Header-Prüfsumme</text><text x="650" y="210" fill="#D7EEF1" font-size="11">16 Bit · pro Hop neu</text>
+    <!-- Row4 -->
+    <rect x="50" y="220" width="800" height="44" fill="#2F6E86" stroke="#1F5266"/><text x="450" y="247" fill="#fff" font-weight="700">Quell-IP-Adresse · 32 Bit</text>
+    <!-- Row5 -->
+    <rect x="50" y="264" width="800" height="44" fill="#2F6E86" stroke="#1F5266"/><text x="450" y="291" fill="#fff" font-weight="700">Ziel-IP-Adresse · 32 Bit</text>
+    <!-- Row6 -->
+    <rect x="50" y="308" width="650" height="44" fill="#F5F1E6" stroke="#E3D9BE"/><text x="375" y="335" fill="#7A5A12" font-weight="600">Optionen (variabel, optional)</text>
+    <rect x="700" y="308" width="150" height="44" fill="#F5F1E6" stroke="#E3D9BE"/><text x="775" y="335" fill="#7A5A12" font-weight="600" font-size="12">Füllbits</text>
+  </g>
+
+  <text x="50" y="384" font-size="13" font-weight="700" fill="#114B58">Wichtig fürs Verständnis:</text>
+  <text x="50" y="406" font-size="12.5" fill="#3A4A4F">• TTL sinkt bei jedem Router um 1 → deshalb muss die Header-Prüfsumme an jedem Hop neu berechnet werden.</text>
+  <text x="50" y="426" font-size="12.5" fill="#3A4A4F">• Das Feld „Protokoll“ sagt der Schicht 3, welche Schicht-4-Nutzlast folgt (TCP, UDP, ICMP …).</text>
+</svg>
