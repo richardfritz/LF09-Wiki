@@ -92,7 +92,7 @@ Im WLAN sendet man über den **freien Raum** – jeder kann mithören. Nur **Ver
 - Die **SSID** (Netzname) kann verborgen werden – Verbindung dann nur mit bekanntem Namen (kein echter Schutz).
 
 ### Störungen & Platzierung
-- **Interferenz** durch Mikrowellen, DECT-Telefone, Bluetooth, Leuchtstofflampen und **benachbarte WLANs** auf demselben Kanal.
+- **Interferenz** durch Mikrowellen, alte Schnurlos-Telefone (vor DECT), Bluetooth, Leuchtstofflampen und **benachbarte WLANs** auf demselben Kanal.
 - **Access Point** möglichst **hoch, zentral und frei** aufstellen; bei Bedarf **freien Kanal** manuell wählen, Repeater oder zweiten AP ergänzen.
 
 > 🔧 Konkrete Schritt-für-Schritt-Fehlersuche (auch für WLAN) auf der Seite [13 · Troubleshooting](13-Troubleshooting.md).
