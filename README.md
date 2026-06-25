@@ -68,5 +68,4 @@ Das Wiki folgt dem **Bottom-Up-Prinzip** des OSI-Modells: Es beginnt beim Kabel 
 | Fehlersuche, Ping-Leiter | alle | [Troubleshooting](13-Troubleshooting.md) |
 | CLI-Befehle (CMD/PowerShell) | – | [Spickzettel](14-CLI-PowerShell-Spickzettel.md) |
 
----
-*LF09 Wiki · auf Basis der Kurs-Handouts (Tag 01–10) · nach OSI-Schichten sortiert · ohne Linux · mit Infografiken*
+
